@@ -1,0 +1,356 @@
+
+.html{
+-webkit-text-size-adjust: 100%;
+}
+
+.body{
+  font-family:"游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", 
+  "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", 
+  "MS PGothic", sans-serif;
+  margin: 0;
+}
+
+h2 {
+font-size:100%;/*初期の値が1.5emだったので巨大化を防ぐ*/
+margin: 0;
+
+}
+
+.header{
+  position:absolute;
+  width:100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+ 
+}
+
+.menu{
+  box-sizing: border-box;
+}
+ 
+.inner{
+  display:flex;
+  justify-content:space-between;
+  margin:0 36px 0 36px;
+  max-width: 100%;
+  position:relative;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+
+.potepanlogoimage-pc{
+  width:185px;
+}
+.potepanlogoimage-sp{
+  width:148.5px;
+}
+
+
+@media screen and (max-width: 1080px){
+
+.header{
+ background-color: #fff;
+ z-index: 10;
+ }
+ 
+ .menu{
+display:none;
+}
+ 
+ .nav >span {
+ cursor: pointer;
+ display: block;
+ position: relative;
+ width: 30px;
+ height: 21px;
+ z-index: 100;/*反映せず、3本線が出てこない*/
+}
+}
+
+
+@media only screen and (max-width:767px){
+  .potepanlogoimage-sp{
+    display:block;
+  }
+  .potepanlogoimage-pc{
+    display: none;
+  }
+  
+.Firstview{
+ background-image: url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/top-hero-sp.jpg);
+}
+
+.FirstView__container{
+max-width: none;
+padding-left: 20px;
+padding-right: 20px;
+}
+
+.FirstViewContent{
+margin-bottom: 30px;
+
+}
+
+}
+  
+
+@media only screen and (min-width:768px){
+  .potepanlogoimage-pc{
+    display:block;
+  }
+  .potepanlogoimage-sp{
+    display: none;
+  }
+  
+  .FirstView{
+background-image: url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/top-hero.jpg);
+}
+  
+.FirstView_container{
+  padding-left:50px;
+  padding-right:50px;
+  box-sizing:border-box;
+  max-width: 1140px;
+  position:relative;
+}
+}
+
+
+
+.HeaderNavListItem {
+ margin-right: 45px;
+}
+
+.HeaderNavListItem__link{
+  text-align: center;
+  text-decoration: none;
+ }
+ 
+ .HeaderNavListItem__link>span:first-child {
+  font-family: Lato, sans-serif;
+  font-size: 14px;
+  }
+  
+  .HeaderNavListItem__link>span:last-child {
+    font-size: 10px;
+  }
+  
+  .HeaderNavListItem__link>span {
+  display: block;
+  font-weight: 700;
+  text-align: center;
+   }
+
+.HeaderNavListItem__button{
+  display: inline-block;/*aタグの上下を指定できるように*/
+  background-color: #F79214;
+  border-radius: 38px;
+  border:none;
+  padding:10px 20px;
+  text-decoration:none;
+  height:20px;
+  color: #fff;
+}
+.menuhumberger{
+  list-style: none;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;/*flexとセットで要素を等間隔に配置*/
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;/*行の折り返しを禁止*/
+}
+
+
+span{
+  display: block;/*ブロック要素にして改行させる*/
+}
+
+
+a{
+  color:#000;
+  font-family:"游ゴシック";
+}
+
+.main{
+  display:block;
+}
+
+
+.FirstView{
+  padding-top:100px;
+  padding-bottom:28px;
+  
+  background-size: cover;
+  background-position: center;
+  background-clip: border-box;/*表示されていない*/
+  width:100%;
+}
+
+.FirstViewContent{
+  margin-bottom:70px;
+  font-size:38px;
+  font-weight:700;
+  box-sizing: border-box;
+  width:fit-content;
+} 
+    
+.saitan{
+  display:flex;
+  text-align: center;
+  margin-bottom:15px;
+  width:auto;
+  color: #000;
+  font-family: 'Lato', sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 54px;
+  
+  
+}
+
+.maruimage{
+  display:inline-block;
+  margin-bottom: 25px;
+}
+
+
+.maru{
+  margin-right:8px;
+}
+
+.buttons{
+  display:flex;
+  font-size: 16px;
+  font-weight:700;
+  height:64px;
+  width: 100%;
+  justify-content: space-between;
+  align-items:center;
+  
+}
+
+.muryo{
+  display:inline-block;
+  text-align: center;
+  text-decoration:none;
+  margin-right:15px;
+  border-radius: 38px;
+  height: 14px;
+  width:306px;
+  background-color: #F79214;
+  padding:20px 0 30px;
+  color:white;
+}
+
+.siryo{
+  display:inline-block;
+  text-align: center;
+  text-decoration:none;
+  background-color: #fff;
+  border: 1px solid #E0E0E0;
+  color: #000;
+  border-radius: 38px;
+  height: 14px;
+  padding: 20px 5px 30px;
+  width:176px;
+
+}
+
+.checkpoint {
+  color: #A2A2A4;
+  line-height: 1.5;
+  font-size: 12px;
+}
+.checkpoint a{
+  text-decoration: none;
+  color: #A2A2A4;
+}
+
+.kiyaku{
+  text-decoration: none;
+}
+
+.aboutwrapper{
+  padding-top: 45px;
+  padding-bottom:45px;
+  background-color: #F79214;
+  
+}
+
+.about{
+  padding-left: 50px;
+  padding-right: 50px;
+  display:flex;
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  
+}
+
+.abouttitle{
+  width:53%;
+  align-items: flex-start;
+  margin-bottom: 0;
+  display: inline-block;
+  flex-direction: column;
+}
+
+
+.abouttitle p {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
+  margin-top: 15px;
+}
+
+.aboutbutton span{
+  font-size: 14px;
+  font-weight: 500;
+  }
+  
+  .span1{
+  font-size: 50px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  display: inline
+
+  }
+  
+  .span2 {
+  font-size: 40px;
+  letter-spacing: 1px;
+  text-align: left;
+  display: inline
+  }
+  
+  .gakusyu{
+  display:block;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 38px;
+  color: #F79214;
+  background-color: white;
+  border: none;
+  height:64px;
+  text-align: center;
+  width:250px;
+  padding-top: 10px;
+  }
+  
+  .gakusyu>span:first-child {
+  font-family: 'Lato', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  }
+  
+  .gakusyu>span:last-child {
+  font-size: 12px;
+  }
+  
