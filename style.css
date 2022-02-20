@@ -46,74 +46,11 @@ margin: 0;
   width:148.5px;
 }
 
-
-@media screen and (max-width: 1080px){
-
-.header{
- background-color: #fff;
- z-index: 10;
- }
- 
- .menu{
-display:none;
+.potepanlogoimage-pc:hover{
+ opacity: 0.8; 
 }
- 
- .nav >span {
- cursor: pointer;
- display: block;
- position: relative;
- width: 30px;
- height: 21px;
- z-index: 100;/*反映せず、3本線が出てこない*/
-}
-}
-
-
-@media only screen and (max-width:767px){
-  .potepanlogoimage-sp{
-    display:block;
-  }
-  .potepanlogoimage-pc{
-    display: none;
-  }
-  
-.Firstview{
- background-image: url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/top-hero-sp.jpg);
-}
-
-.FirstView__container{
-max-width: none;
-padding-left: 20px;
-padding-right: 20px;
-}
-
-.FirstViewContent{
-margin-bottom: 30px;
-
-}
-
-}
-  
-
-@media only screen and (min-width:768px){
-  .potepanlogoimage-pc{
-    display:block;
-  }
-  .potepanlogoimage-sp{
-    display: none;
-  }
-  
-  .FirstView{
-background-image: url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/top-hero.jpg);
-}
-  
-.FirstView_container{
-  padding-left:50px;
-  padding-right:50px;
-  box-sizing:border-box;
-  max-width: 1140px;
-  position:relative;
-}
+.potepanlogoimage-sp:hover{
+ opacity: 0.8; 
 }
 
 
@@ -152,6 +89,10 @@ background-image: url(https://camp.potepan.com/wp-content/themes/potepancamp/ass
   height:20px;
   color: #fff;
 }
+.HeaderNavListItem__button:hover{
+  opacity: 0.8;
+}
+
 .menuhumberger{
   list-style: none;
   align-items: center;
@@ -177,6 +118,10 @@ a{
   display:block;
 }
 
+.mainimage-sp{
+ display: none;
+ }
+
 
 .FirstView{
   padding-top:100px;
@@ -193,11 +138,10 @@ a{
   font-size:38px;
   font-weight:700;
   box-sizing: border-box;
-  width:fit-content;
 } 
     
 .saitan{
-  display:flex;
+  display: flex;
   text-align: center;
   margin-bottom:15px;
   width:auto;
@@ -221,7 +165,7 @@ a{
 }
 
 .buttons{
-  display:flex;
+  display:block;
   font-size: 16px;
   font-weight:700;
   height:64px;
@@ -242,6 +186,9 @@ a{
   background-color: #F79214;
   padding:20px 0 30px;
   color:white;
+}
+.muryo:hover{
+opacity: 0.8;
 }
 
 .siryo{
@@ -309,6 +256,10 @@ a{
   margin-top: 15px;
 }
 
+.aboutbutton:hover{
+  opacity: 0.8;
+}
+
 .aboutbutton span{
   font-size: 14px;
   font-weight: 500;
@@ -354,3 +305,182 @@ a{
   font-size: 12px;
   }
   
+/*以下メディアクエリ*/  
+
+@media screen and (max-width: 1080px){
+
+.header{
+ background-color: #fff;
+ z-index: 10;
+ }
+ 
+ .HeaderNavHamburger{
+  cursor: pointer;
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 21px;
+  z-index: 100;
+  word-break: break-all;
+}
+
+ .HeaderNavHamburger__line{
+   top: 50%;
+   display: block;
+   width: 100%;
+   height: 3px;
+   background-color: #000;
+   transform: translate(0, -50%);
+   border-radius: 10px;
+   transition: top 0.2s, transform 0.2s, opacity 0.3s;
+   
+ }
+ 
+ .HeaderNavHamburger__line:nth-child(n+1){
+   margin-top:6px;
+ }
+ 
+ 
+ 
+ 
+    
+ .menuhumberger{
+display:none;
+}
+
+ 
+ .nav >span {
+ cursor: pointer;
+ display: block;
+ position: relative;
+ width: 30px;
+ height: 21px;
+ z-index: 100;/*反映せず、3本線が出てこない*/
+}
+}
+
+@media screen and (max-width: 1024px){
+.abouttitle {
+margin-bottom: 0;
+width: 100%;
+}
+.about {
+flex-direction: column;
+}
+}
+
+
+@media only screen and (min-width:768px){
+  .potepanlogoimage-pc{
+    display:block;
+  }
+  
+  
+  .potepanlogoimage-sp{
+    display: none;
+  }
+  
+  .FirstView{
+background-image: url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/top-hero.jpg);
+}
+  
+.FirstView_container{
+  padding-left:50px;
+  padding-right:50px;
+  box-sizing:border-box;
+  max-width: 1140px;
+  position:relative;
+}
+}
+
+
+
+@media only screen and (max-width:767px){
+  
+  
+.mainimage-sp{
+    display: block;
+    width:100%;
+ }
+
+  .potepanlogoimage-sp{
+    display:block;
+  }
+  .potepanlogo-pc{
+    display: none;
+  }
+  
+
+
+.FirstView_container{
+max-width: none;
+padding-left: 20px;
+padding-right: 20px;
+margin-top: -45vw;
+}
+
+.FirstViewContent{
+margin-bottom: 20px;
+max-width: none;
+padding-left: 20px;
+padding-right: 20px;
+}
+
+.saitan{
+  font-size: 25px;
+  line-height: 36px;
+  display: block;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+}
+
+.maruimage{
+ margin-bottom: 30px;
+ width: 100%;
+ display: flex;
+ justify-content: space-between;
+ 
+}
+
+.maru{
+  display: block;
+  width:27.5%;
+  
+}
+
+.maruimage :nth-of-type(2) {
+width: 40%;
+}
+
+.maru3{
+  display: block;
+  width:27.5%;
+  
+}
+
+.buttons{
+display: block
+}
+
+.muryo{
+  width:100%;
+  margin-bottom: 10px;
+}
+
+.siryo{
+  width:100%;
+}
+
+.checkpoint{
+  margin-top: 80px;/*文字が重なったため自分で調整*/
+}
+
+.span1 {
+ font-size: 33px;
+}
+.span2{
+  font-size: 30px;
+}
+
+}
